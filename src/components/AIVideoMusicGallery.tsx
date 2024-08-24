@@ -51,7 +51,11 @@ class AIVideoMusicGallery extends React.Component {
         ];
         return (
             <div className="gallery-container">
-                <ImageGallery items={images}/>
+                <ImageGallery showPlayButton={false}
+                              showFullscreenButton={true}
+                              showNav={true}
+                              showThumbnails={true}
+                              items={images} />
             </div>
         );
     }
