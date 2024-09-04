@@ -4,14 +4,15 @@ import Tooltip from "./Tooltip";
 const About: React.FC = () => {
 
     const logos = [
-        { src: '/assets/img/logos/docker.svg', alt: 'Docker' },
-        { src: '/assets/img/logos/Angular.png', alt: 'Angular' },
         { src: '/assets/img/logos/github.png', alt: 'GitHub' },
+        { src: '/assets/img/logos/java-se.png', alt: 'Java' },
         { src: '/assets/img/logos/IntelliJ_IDEA.png', alt: 'IntelliJ IDEA' },
-        { src: '/assets/img/logos/java-se.png', alt: 'Java SE' },
-        { src: '/assets/img/logos/kubernetes.png', alt: 'Kubernetes' },
+        { src: '/assets/img/logos/react.svg', alt: 'React' },
+        { src: '/assets/img/logos/Angular.png', alt: 'Angular' },
         { src: '/assets/img/logos/Python-logo.png', alt: 'Python' },
-        { src: '/assets/img/logos/react.svg', alt: 'React' }
+        { src: '/assets/img/logos/docker.svg', alt: 'Docker' },
+        { src: '/assets/img/logos/kubernetes.png', alt: 'Kubernetes' },
+
     ];
 
     const ai_logos = [
