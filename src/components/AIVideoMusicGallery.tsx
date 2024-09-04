@@ -2,25 +2,59 @@ import ImageGallery, {ReactImageGalleryItem} from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import React from "react";
 
+interface Dimensions {
+    width: number;
+    height: number;
+}
 
-class AIVideoMusicGallery extends React.Component {
+interface AIVideoMusicGalleryState {
+    dimensions: Dimensions;
+}
+
+class AIVideoMusicGallery extends React.Component<{}, AIVideoMusicGalleryState>  {
+
+    private resizeListener: (() => void) | null = null;
+
+    constructor(props: {}) {
+        super(props);
+        this.state = {
+            dimensions: { width: 560, height: 315 }
+        };
+    }
+
+    componentDidMount() {
+        this.updateDimensions();
+        this.resizeListener = this.updateDimensions.bind(this);
+        window.addEventListener('resize', this.resizeListener);
+    }
+
+    componentWillUnmount() {
+        if (this.resizeListener) {
+            window.removeEventListener('resize', this.resizeListener);
+        }
+    }
+
+    updateDimensions() {
+        const width = Math.min(window.innerWidth - 20, 560);
+        const height = Math.round((width / 16) * 9);
+        this.setState({ dimensions: { width, height } });
+    }
 
     _renderVideo(item: ReactImageGalleryItem) {
         return (
-
-                <div className="video-wrapper">
-                    <button className="close-video"/>
-                    <iframe
-                        title="sample video"
-                        width="560"
-                        height="315"
-                        src={item.original}
-                        style={{border: "none"}}
-                        allowFullScreen
-                    />
-                </div>
+            <div className="video-wrapper">
+                <button className="close-video"/>
+                <iframe
+                    title="sample video"
+                    width={this.state.dimensions.width}
+                    height={this.state.dimensions.height}
+                    src={item.original}
+                    style={{border: "none"}}
+                    allowFullScreen
+                />
+            </div>
         );
-    }
+    };
 
     render() {
         const images = [

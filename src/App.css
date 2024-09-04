@@ -295,7 +295,7 @@ section {
 .gallery-title {
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   margin-bottom: 40px;
-  text-align: center;
+  text-align: left;
   color: var(--color-title);
 }
 
