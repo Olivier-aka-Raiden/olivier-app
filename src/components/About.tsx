@@ -16,6 +16,7 @@ const About: React.FC = () => {
     ];
 
     const ai_logos = [
+        { src: '/assets/img/logos/chatgpt-logo.jpg', alt: 'ChatGPT' },
         { src: '/assets/img/logos/sdnext.jfif', alt: 'SDNext' },
         { src: '/assets/img/logos/flux.webp', alt: 'Flux' },
         { src: '/assets/img/logos/replicate-prediction-gwlekklbmfsw4vub4vi3uhvgpy.png', alt: 'Replicate Prediction' },
