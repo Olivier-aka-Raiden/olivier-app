@@ -1,6 +1,7 @@
 import React from 'react';
 import AIImageGallery from "./AIImageGallery";
 import AIVideoMusicGallery from "./AIVideoMusicGallery";
+import AIVideoGallery from "./AIVideoGallery";
 
 
 
@@ -143,6 +144,9 @@ const AIWork: React.FC = () => {
                     </p>
                     <div className="gallery">
                         <AIImageGallery images={loraImages}/>
+                    </div>
+                    <div className="gallery">
+                        <AIVideoGallery/>
                     </div>
                 </div>
                 <div>
