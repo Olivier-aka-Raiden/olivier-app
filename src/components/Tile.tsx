@@ -9,23 +9,29 @@ interface TileProps {
 }
 
 const TileContainer = styled.div`
-  min-width: 300px;
-  max-width:300px;
+  width: 100%;
+  max-width: 360px;
   min-height: 500px;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   display: flex;
-  flex: 1 1 calc(25% - 20px);
   flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(41, 53, 186, 0.25);
+  }
 `;
 
 const ImageSection = styled.div<{ imageUrl: string }>`
-  height: 40%;
+  height: 200px;
   background-image: url(${props => props.imageUrl});
   background-size: cover;
   background-position: center;
   position: relative;
+  flex-shrink: 0;
 `;
 
 const TitleOverlay = styled.div`
@@ -34,18 +40,20 @@ const TitleOverlay = styled.div`
   right: 10px;
   background-color: rgba(0,0,0,0.6);
   color: white;
-  padding: 5px 10px;
+  padding: 6px 14px;
   border-radius: 10px;
+  font-size: 0.7rem;
 `;
 
 const DescriptionSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 60%;
-  padding: 15px;
+  flex: 1;
+  padding: 20px;
   font-weight: 400;
-  font-size:20px;
+  font-size: 0.55rem;
+  line-height: 1.5;
   background-color: var(--card-color);
   color: var(--text-color);
 `;
@@ -57,7 +65,10 @@ const LearnMoreLink = styled.a`
   font-weight: bold;
   display: flex;
   align-items: center;
+  gap: 6px;
   transition: color 0.3s ease;
+  margin-top: 16px;
+  font-size: 0.6rem;
 
   &:hover {
     color: var(--color-link-hover);
@@ -65,12 +76,11 @@ const LearnMoreLink = styled.a`
 
   &::after {
     content: '→';
-    margin-left: 5px;
     transition: transform 0.3s ease;
   }
 
   &:hover::after {
-    transform: translateX(3px);
+    transform: translateX(4px);
   }
 `;
 

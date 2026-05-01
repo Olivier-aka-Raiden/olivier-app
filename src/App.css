@@ -207,11 +207,18 @@ ul {
 
 .tile-container {
   margin: 40px 20px;
-  display:flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 20px;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+@media (max-width: 768px) {
+  .tile-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 20px 10px;
+  }
 }
 
 .menu {
