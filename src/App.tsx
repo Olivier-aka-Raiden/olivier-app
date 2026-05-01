@@ -71,6 +71,7 @@ const App: React.FC = () => {
                     </nav>
                 </header>
                 <div className="content">
+                    {isMenuOpen && <div className="burger-backdrop" onClick={toggleMenu} />}
                     <BurgerMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} activeSection={activeSection}/>
                     <section id="home">
                         <Home/>
