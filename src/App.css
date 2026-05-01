@@ -352,6 +352,11 @@ section {
   color: #61dafb; /* Highlight color on hover */
 }
 
+.menu li.nav-active a,
+.burger-menu-list li.nav-active a {
+  color: #61dafb;
+}
+
 /* Content styles to avoid overlap with fixed header */
 .content {
   margin-top: 15vh; /* Adjust this value to match the header's height */
