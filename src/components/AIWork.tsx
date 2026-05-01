@@ -1,8 +1,8 @@
 import React from 'react';
 import AIImageGallery from "./AIImageGallery";
-import AIVideoMusicGallery from "./AIVideoMusicGallery";
-import AIVideoGallery from "./AIVideoGallery";
+import VideoGallery from "./VideoGallery";
 import PromptCarousel from "./PromptCarousel";
+import { aiVideoItems, musicVideoItems } from "../data/videos";
 
 
 
@@ -202,7 +202,7 @@ const AIWork: React.FC = () => {
                         <AIImageGallery images={loraImages}/>
                     </div>
                     <div className="gallery">
-                        <AIVideoGallery/>
+                        <VideoGallery items={aiVideoItems} />
                     </div>
                 </div>
                 <div>
@@ -211,7 +211,7 @@ const AIWork: React.FC = () => {
                         Explore a collection of songs I made using RVC models or Suno AI
                     </p>
                     <div className="gallery">
-                    <AIVideoMusicGallery/>
+                    <VideoGallery items={musicVideoItems} />
                     </div>
                 </div>
                 <div>
