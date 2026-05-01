@@ -91,8 +91,6 @@ const App: React.FC = () => {
                 </div>
                 <BackToTop/>
                 <div className="wrap">
-                    <div className="content content--reflection">
-                    </div>
                 </div>
             </BrowserRouter>
         </div>
