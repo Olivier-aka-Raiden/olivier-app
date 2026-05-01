@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 interface TooltipProps {
     text: string;
@@ -6,16 +6,10 @@ interface TooltipProps {
 }
 
 const Tooltip: React.FC<TooltipProps> = ({ text, children }) => {
-    const [visible, setVisible] = useState(false);
-
     return (
-        <div
-            className="tooltip-container"
-            onMouseEnter={() => setVisible(true)}
-            onMouseLeave={() => setVisible(false)}
-        >
+        <div className="tooltip-container">
             {children}
-            {visible && <div className="tooltip-box">{text}</div>}
+            <div className="tooltip-box">{text}</div>
         </div>
     );
 };

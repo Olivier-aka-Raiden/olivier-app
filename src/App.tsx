@@ -9,9 +9,13 @@ import AIWork from './components/AIWork';
 import Contact from './components/Contact';
 import {scrollWithOffset} from './services/scrollToElement.service';
 import BurgerMenu from "./components/BurgerMenu";
+import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop";
+import { useActiveSection } from "./services/useActiveSection";
 
 const App: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const activeSection = useActiveSection();
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -30,28 +34,28 @@ const App: React.FC = () => {
                             </Link>
                         </div>
                         <ul className="menu desktop-menu">
-                            <li>
+                            <li className={activeSection === 'about' ? 'nav-active' : ''}>
                                 <Link scroll={el => scrollWithOffset(el)} to="#about">
                                     <div role="button" className="menu-button">
                                         About
                                     </div>
                                 </Link>
                             </li>
-                            <li>
+                            <li className={activeSection === 'projects' ? 'nav-active' : ''}>
                                 <Link scroll={el => scrollWithOffset(el)} to="#projects">
                                     <div role="button" className="menu-button">
                                         Projects
                                     </div>
                                 </Link>
                             </li>
-                            <li>
+                            <li className={activeSection === 'ai-work' ? 'nav-active' : ''}>
                                 <Link scroll={el => scrollWithOffset(el)} to="#ai-work">
                                     <div role="button" className="menu-button">
                                         AI Work
                                     </div>
                                 </Link>
                             </li>
-                            <li>
+                            <li className={activeSection === 'contact' ? 'nav-active' : ''}>
                                 <Link scroll={el => scrollWithOffset(el)} to="#contact">
                                     <div role="button" className="menu-button">
                                         Contact
@@ -67,7 +71,8 @@ const App: React.FC = () => {
                     </nav>
                 </header>
                 <div className="content">
-                    <BurgerMenu isOpen={isMenuOpen} toggleMenu={toggleMenu}/>
+                    {isMenuOpen && <div className="burger-backdrop" onClick={toggleMenu} />}
+                    <BurgerMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} activeSection={activeSection}/>
                     <section id="home">
                         <Home/>
                     </section>
@@ -83,10 +88,10 @@ const App: React.FC = () => {
                     <section id="contact">
                         <Contact/>
                     </section>
+                <Footer/>
                 </div>
+                <BackToTop/>
                 <div className="wrap">
-                    <div className="content content--reflection">
-                    </div>
                 </div>
             </BrowserRouter>
         </div>

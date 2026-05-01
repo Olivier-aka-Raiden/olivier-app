@@ -57,11 +57,11 @@ const MessageBubble = styled.div<{ isResponse?: boolean }>`
     margin: ${props => props.isResponse ? '0 0 0 auto' : '0 auto 0 0'};
     width: 70vw;
     color: var(--color-text);
-    font-size: 0.5rem;
+    font-size: 0.7rem;
 
     @media (max-width: 768px) {
         padding: 0 10px;
-        font-size: 0.5rem;
+        font-size: 0.7rem;
         overflow-y: visible!important;
     }
 `;
@@ -74,11 +74,11 @@ const BubbleLabel = styled.div<{ isResponse?: boolean }>`
     padding: 2px 10px;
     border: 2px solid var(--color-link);
     border-radius: 12px;
-    font-size: 0.4rem;
+    font-size: 0.6rem;
     color: var(--color-title);
 
     @media (max-width: 768px) {
-        font-size: 0.3rem;
+        font-size: 0.5rem;
         padding: 1px 4px;
     }
 `;
@@ -103,7 +103,7 @@ const PromptBubble: React.FC<PromptBubbleProps> = ({ prompt, response, model }) 
             <MessageBubble
                 isResponse
                 ref={responseRef}
-                onTouchEnd={handleScroll}
+                onScroll={handleScroll}
             >
                 <BubbleLabel isResponse>{model}</BubbleLabel>
                 <ReactMarkdown>{response}</ReactMarkdown>

@@ -29,12 +29,12 @@ const About: React.FC = () => {
             <h2 className="content__title">About me</h2>
             <div className="item">
                 <p>Olivier Villequey,<br/>
-                    Working as Software Engineer in Strasbourg, France
+                    Working as Software Engineer at Lombard Odier in Geneva, Switzerland
                 </p>
                 <div className="apps-flex-container">
                     {logos.map((logo, index) => (
                         <Tooltip key={index} text={logo.alt}>
-                            <div className="app-flex" key={index}>
+                            <div className="app-flex">
                                 <img decoding="async" src={logo.src} className="app-logo" alt={logo.alt} data-tooltip={logo.alt}/>
                             </div>
                         </Tooltip>
@@ -76,8 +76,12 @@ const About: React.FC = () => {
                         <h3>Professional Experience:</h3>
                         <ul>
                             <li>
-                                <strong>France Travail</strong> (Sept 2022 - Present)<br />
-                                Developing APIs for business and professional individual referentials
+                                <strong>Lombard Odier</strong> (Geneva — Present)<br />
+                                Working on financial technology solutions
+                            </li>
+                            <li>
+                                <strong>France Travail</strong> (Sept 2022 - 2025)<br />
+                                Developed APIs for business and professional individual referentials
                             </li>
                             <li>
                                 <strong>Électricité de Strasbourg</strong> (Oct 2020 - Sept 2022)<br />

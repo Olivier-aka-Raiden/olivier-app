@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import PromptBubble from './PromptBubble';
-
-interface Conversation {
-    prompt: string;
-    response: string;
-    model: string;
-}
+import { Conversation } from '../data/conversations';
 
 interface PromptCarouselProps {
     conversations: Conversation[];
