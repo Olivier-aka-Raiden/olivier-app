@@ -103,7 +103,7 @@ const PromptBubble: React.FC<PromptBubbleProps> = ({ prompt, response, model }) 
             <MessageBubble
                 isResponse
                 ref={responseRef}
-                onTouchEnd={handleScroll}
+                onScroll={handleScroll}
             >
                 <BubbleLabel isResponse>{model}</BubbleLabel>
                 <ReactMarkdown>{response}</ReactMarkdown>
