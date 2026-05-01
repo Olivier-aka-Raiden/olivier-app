@@ -34,7 +34,7 @@ const About: React.FC = () => {
                 <div className="apps-flex-container">
                     {logos.map((logo, index) => (
                         <Tooltip key={index} text={logo.alt}>
-                            <div className="app-flex" key={index}>
+                            <div className="app-flex">
                                 <img decoding="async" src={logo.src} className="app-logo" alt={logo.alt} data-tooltip={logo.alt}/>
                             </div>
                         </Tooltip>
