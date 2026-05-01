@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import {scrollWithOffset} from './services/scrollToElement.service';
 import BurgerMenu from "./components/BurgerMenu";
 import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop";
 
 const App: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -84,8 +85,9 @@ const App: React.FC = () => {
                     <section id="contact">
                         <Contact/>
                     </section>
-                </div>
                 <Footer/>
+                </div>
+                <BackToTop/>
                 <div className="wrap">
                     <div className="content content--reflection">
                     </div>
