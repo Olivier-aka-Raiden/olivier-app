@@ -206,18 +206,28 @@ ul {
 }
 
 .tile-container {
-  margin: 40px 20px;
+  margin: 40px auto;
+  max-width: 1140px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   justify-items: center;
+}
+
+@media (max-width: 1024px) {
+  .tile-container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 760px;
+    gap: 24px;
+  }
 }
 
 @media (max-width: 768px) {
   .tile-container {
     grid-template-columns: 1fr;
+    max-width: 400px;
     gap: 24px;
-    margin: 20px 10px;
+    margin: 20px auto;
   }
 }
 

@@ -10,8 +10,8 @@ interface TileProps {
 
 const TileContainer = styled.div`
   width: 100%;
-  max-width: 360px;
-  min-height: 500px;
+  max-width: 340px;
+  min-height: 480px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
