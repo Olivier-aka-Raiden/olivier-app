@@ -53,6 +53,7 @@ const VideoGallery: React.FC<VideoGalleryProps> = ({ items }) => {
                 showFullscreenButton={true}
                 showNav={true}
                 showThumbnails={true}
+                lazyLoad={true}
                 items={galleryItems}
             />
         </div>

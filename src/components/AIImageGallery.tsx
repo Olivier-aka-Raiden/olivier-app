@@ -18,6 +18,7 @@ class AIImageGallery extends React.Component<AIImageGalleryProps> {
                               showFullscreenButton={true}
                               showNav={true}
                               showThumbnails={true}
+                              lazyLoad={true}
                               items={images} />
             </div>
         );
