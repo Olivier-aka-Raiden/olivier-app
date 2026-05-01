@@ -9,6 +9,7 @@ import AIWork from './components/AIWork';
 import Contact from './components/Contact';
 import {scrollWithOffset} from './services/scrollToElement.service';
 import BurgerMenu from "./components/BurgerMenu";
+import Footer from "./components/Footer";
 
 const App: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -84,6 +85,7 @@ const App: React.FC = () => {
                         <Contact/>
                     </section>
                 </div>
+                <Footer/>
                 <div className="wrap">
                     <div className="content content--reflection">
                     </div>
