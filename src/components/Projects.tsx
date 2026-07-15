@@ -42,6 +42,18 @@ const Projects: React.FC = () => {
                     description="A multi-service financial analysis platform using Quarkus/Java, Neo4j graph database, and n8n workflows. Featuring real-time stock screening, AI-powered sentiment analysis, and a React dashboard for portfolio tracking."
                     learnMoreUrl="https://github.com/Olivier-aka-Raiden/radar-app"
                 />
+                <Tile
+                    imageUrl="/assets/img/fawzz-tv.webp"
+                    title="Fawzz TV"
+                    description="Official website for the Fawzz_tv Twitch channel, built with React 19, Tailwind CSS v4, and Framer Motion. Features a neon Twitch purple theme, cycling adventure highlights, bilingual i18n, and interactive Mapbox maps."
+                    learnMoreUrl="https://github.com/Olivier-aka-Raiden/fawzz_tv-app"
+                />
+                <Tile
+                    imageUrl="/assets/img/gta-vi.webp"
+                    title="GTA VI Waiting Room"
+                    description="A mobile-first React + Capacitor progressive web app with a Quarkus/Neo4j backend. Tracks official GTA VI release info with a live countdown, edition tracking, and Firebase push notifications for meaningful updates."
+                    learnMoreUrl="https://github.com/Olivier-aka-Raiden/GTAVI-Waiting-Room"
+                />
             </div>
         </div>
     );
